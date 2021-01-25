@@ -1,0 +1,30 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Solution {
+       public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+    long[] add=new long[5];
+    long sum=0;
+    long[] min=new long[5];
+    
+    for(int i=0;i<5;i++){
+        add[i]=sc.nextInt();
+        sum=sum+add[i];
+    }
+   
+    for(int i=0;i<5;i++){
+        min[i]=sum-add[i];
+        
+        }
+       long minimum = Arrays.stream(min).min().getAsLong();
+        long maximum = Arrays.stream(min).max().getAsLong();
+         System.out.println(minimum+" "+maximum);
+    }
+}
+
